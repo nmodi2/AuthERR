@@ -1,0 +1,223 @@
+  /*  
+    File Name: app.css
+    Group 2: 2BeOrNot2Be
+    
+     */
+
+/*Custom CSS goes here*/
+
+@font-face {
+  font-family: 'bebas_neuebold';
+  src: url('bebasneue-bold-webfont.woff2') format('woff2'), url('bebasneue-bold-webfont.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+body {
+  background-color: #3C413D;
+}
+
+main {
+  margin-left: auto;
+  margin-right: auto;
+  width: 960px;
+  display: table;
+}
+
+#nav_Name {
+  position: relative;
+  left: 10px;
+}
+
+.navbar-expand-lg {
+  position: sticky;
+  top: 0px;
+  z-index: 20;
+}
+
+#logo {
+  height: 80px;
+  width: 80px;
+  border-radius: 100px;
+}
+
+a {
+  font-family: bebas_neuebold;
+  font-stretch: expanded;
+}
+
+.jumbotron {
+  font-family: bebas_neuebold;
+  border-radius: 10px;
+  box-shadow: 5px 5px 5px black;
+  width: 90%;
+}
+
+#jum_home {
+  height: 860px;
+}
+
+.pages {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+label {
+  display: table-row;
+  position: relative;
+}
+
+input {
+  display: table-cell;
+  position: relative;
+  left: 150px;
+  bottom: 24px;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+textarea {
+  position: relative;
+  right: 50px;
+}
+
+.button {
+  margin: 5px;
+  position: relative;
+  left: 0px;
+}
+
+#welcome {
+  width: 80%;
+  height: 20%;
+  border-radius: 10px;
+  position: relative;
+  left: 12%;
+  border: #3C413D 1px solid;
+}
+
+.home_box {
+  background-color: #3C413D;
+  height: 55%;
+  width: 80%;
+  z-index: 1;
+  position: relative;
+  top: 50px;
+  left: 12%;
+  border-radius: 10px;
+  border: 1px black solid;
+  padding: 25px;
+  color: white;
+}
+
+p, li {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.hover:hover {
+  background-color: #FFFFC2;
+  color: #3C413D;
+}
+
+#intro {
+  color: #DCDC95;
+  text-align: justify;
+}
+
+p.hover {
+  width: -moz-fit-content;
+  display: inline;
+  position: relative;
+  left: 180px;
+  margin: 2px;
+  padding: 2px;
+  border-radius: 5px;
+}
+
+.hover {
+  border-style: groove;
+  background-color: #336699;
+  color: #394d63;
+}
+
+label {
+  font-family: bebas_neuebold;
+  font-size: 21px;
+  position: relative;
+  left: 30px;
+  top: 11px;
+}
+
+table {
+  font-family: verdana;
+}
+
+.form-control {
+  width: 60%;
+}
+
+#addsurvey {
+  position: relative;
+  left: 100px;
+  width: 130px;
+}
+
+#displayName.hover {
+  color: #DBDED5;
+}
+
+.navbart, .moved {
+  position: relative;
+  left: -80px;
+}
+
+li, ul {
+  text-decoration: none;
+  color: #616657;
+  list-style: none;
+  
+}
+
+.jum {
+  position: relative;
+  left: 50px;
+}
+
+textarea{
+  position: relative;
+  left:10%;
+}
+
+.questions{
+  position: relative;
+  left: 10%;
+}
+
+@media (min-width: 100px) {
+  .navbart, .moved {
+    position: relative;
+    left: 0px;
+  }
+  #slide{
+    font: white;
+  }
+ 
+}
+
+@media (min-width: 1200px) {
+  .navbart, .moved {
+    position: relative;
+    left: -80px;
+  }
+   #slide{
+    background: #DBDED5;
+    position: absolute;
+    left: 84%;
+    top: 70px;
+    padding: 10px;
+    width: 170px;
+    border-radius: 5px;
+    display:none; 
+    border: #394d63 solid 1px;
+    z-index:2;
+  
+  }
+}

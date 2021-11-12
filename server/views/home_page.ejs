@@ -1,0 +1,43 @@
+   <!--
+    File Name: home_page.ejs
+    Group 2: 2BeOrNot2Be 
+    -->
+<%- include Partials/header.ejs%>
+  <%- include Partials/main_nav.ejs%>
+
+    <!--Main Content-->
+    <div class="pages">
+      <main class="container">
+        <div class="jumbotron bg-light p-5 rounded-lg m-3" id="jum_home">
+          <h1 class="display-4">
+            <%= title %>
+          </h1>
+          <hr>
+
+          <!--Home Page Content-->
+          <div id="page">
+            <br>
+            <img src="Assets/images/welcome.jpg" id="welcome">
+            <br>
+            <div class="home_box">
+              <h4>Two Be Or Not Two Be</h4>
+              <br>
+              <p> &nbsp Welcome to the world's number one survey site where you can store your surveys in a private ad
+                secure database at no cost. Choose from managing your survey results to compiling all your data in an
+                easy-to-read Excel sheet.
+                With just a few simple clicks, you can log in, manage, and distribute surveys to your heart's content.
+                Join today for free!
+              </p>
+              <br>
+            </div>
+          </div>
+        </div>
+      </main>
+
+      <br>
+      <br>
+      <br>
+
+      <%- include Partials/bottom_nav.ejs%>
+
+        <%- include Partials/footer.ejs%>

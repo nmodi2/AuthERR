@@ -1,0 +1,58 @@
+    <!--
+    File Name: edit.ejs
+    Group 2: 2BeOrNot2Be 
+    -->
+    
+
+<%- include ../Partials/header.ejs%>
+<%- include ../Partials/main_nav.ejs%>
+
+<main class="container">
+<!--Message Area-->
+<div class="jumbotron bg-light p-5 rounded-lg m-3 container-fluid">
+<div class="row">
+    <div class="offset-md-4 col-md-4">
+        <h1><%= title %></h1>
+        <form class="form"  method="POST">
+        <div class="form-group">
+
+            <fieldset class="form-group">
+                <label for="username">Username: </label>
+                <input type="text" class="form-control"
+                name="username" id="username">
+            </fieldset>
+
+            <fieldset class="form-group">
+                <label for="password">Password: </label>
+                <input type="password" class="form-control"
+                name="password" placeholder="Enter new password"
+                id="password" required>
+            </fieldset>
+
+            <fieldset class="form-group">
+                <label for="displayName">Display Name: </label>
+                <input type="text" class="form-control"
+                name="displayName" placeholder="Enter display Name"
+                 required>
+            </fieldset>
+
+            <fieldset class="form-group">
+                <label for="email">Email: </label>
+                <input type="email" class="form-control"
+                name="email" placeholder="Enter Email Address"
+                id="email" required>
+            </fieldset>
+            <br>
+            <fieldset class="form-group text-right">
+                <input type="submit" class="btn btn-success" value="Update">
+                <a href="/">
+                <input type="button" class="btn btn-warning" value="Cancel"></a>
+            </fieldset>
+
+        </form>
+    </div>
+    </div>
+</div>
+</main>
+<%- include ../Partials/bottom_nav.ejs%>  
+<%- include ../Partials/footer.ejs%>  

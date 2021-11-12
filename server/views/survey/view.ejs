@@ -1,0 +1,38 @@
+   <!--
+    File Name: view.ejs
+    Group 2: 2BeOrNot2Be 
+    -->
+
+<%- include ../Partials/header.ejs%>
+<%- include ../Partials/main_nav.ejs%>
+
+
+<div class="jumbotron bg-light p-5 rounded-lg m-3 container-fluid jum">
+    <div class="row">
+        <div class="offset-md-3 col=md-6"></div>
+        <h1><%= title %></h1>
+        <br>
+        <br>
+        <form class="form"  method="POST">
+        <div class="form-group">
+        <h2><%= survey.name%></h2>
+        
+        <h4 style="font-family: verdana;" class="questions"><%= survey.q1%></h4>
+        <textarea class="form-control"></textarea>
+        <h4 style="font-family: verdana;" class="questions"><%= survey.q2%></h4>
+        <textarea class="form-control"></textarea>
+        <h4 style="font-family: verdana;"class="questions"><%= survey.q3%></h4>
+        <textarea class="form-control"></textarea>
+        </div>
+        <br>
+        <br>
+        <button class="btn btn-primary" type="submit"><i class="fas fa-edit"></i>Submit</button>
+        <a href="/survey-list" class="btn btn-warning"><i class="fas fa-undo"></i> Cancel</a>
+    </div>
+</div>
+    </form>
+    
+
+<%- include ../Partials/bottom_nav.ejs%>  
+
+<%- include ../Partials/footer.ejs%>  

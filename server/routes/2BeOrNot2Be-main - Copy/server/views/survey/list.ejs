@@ -1,0 +1,69 @@
+   <!--
+    File Name: list.ejs
+    Group 2: 2BeOrNot2Be 
+    -->
+
+<%- include ../Partials/header.ejs%>
+<%- include ../Partials/main_nav.ejs%>
+
+        <main class="container-fluid">
+
+            <div class="jumbotron bg-light p-5 rounded-lg m-3 container-fluid jum">
+                <h1>
+                    <%= title %>
+                </h1>
+                <br>
+                <br>
+                <table class="table table-bordered table-striped table-hover col-md-6">
+                    <!-- Header Row-->
+                    <tr>
+                        <th class="text-center" scope="col-1">Name</th>
+                        <th class="text-center" scope="col-1">Survey Link</th>
+                        <% if(typeof displayName=='string' && displayName) { %>
+                            <th class="text-center" scope="col-1"></th>
+                            <th class="text-center" scope="col-1"></th>
+                            <% } %>
+                    </tr>
+
+                    <!-- Repeatable Template Row-->
+                    <% for(let count=0; count < surveyList.length; count++) { %>
+                        <tr>
+                            <td class="class text-center col-1">
+                                <%= surveyList[count].name %>
+                            </td>
+                            <td class="class text-center col-1">
+                                    <a href="/survey-list/view/<%= surveyList[count].id %>"
+                                        style="font-family: Verdana, Geneva, Tahoma, sans-serif;"
+                                        class="btn btn-primary btn-sm"><i class="far fa-eye"></i>
+                                        <b>View Survey</b></a>
+
+                            <% if(typeof displayName=='string' && displayName) { %>
+                                <td class="text-center col-1">
+                                    <a href="/survey-list/edit/<%= surveyList[count].id %>"
+                                        style="font-family: Verdana, Geneva, Tahoma, sans-serif;"
+                                        class="btn btn-primary btn-sm"><i class="fas fa-pencil-alt"></i>
+                                        <b>Update</b></a>
+                                </td>
+                                <td class="text-center col-1">
+                                    <a href="/survey-list/delete/<%= surveyList[count].id %>"
+                                        class="btn btn-danger btn-sm" id="danger"><i class="fas fa-trash-alt"> <span
+                                                style="font-family: Verdana, Geneva, Tahoma, sans-serif;">
+                                                Delete</span></i></a>
+                                </td>
+                                <% } %>
+                        </tr>
+
+                        <% } %>
+                </table>
+                <% if(typeof displayName=='string' && displayName) { %>
+                    <a href="/survey-list/add" style="font-family: Verdana, Geneva, Tahoma, sans-serif;"
+                        class="btn btn-primary" role="button" id="addsurvey"><i class="fas fa fa-plus-circle"></i>
+                        <b>Add a Survery</b></a>
+                    <% } %>
+            </div>
+
+            </div>
+
+            <%- include ../Partials/bottom_nav.ejs%>
+
+                <%- include ../Partials/footer.ejs%>
